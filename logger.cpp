@@ -54,7 +54,7 @@ namespace saws {
                     log_level = "[WARN]:";
                     msg = "\033[33m[WARN]: " + message.message + '\n' + "\033[0m";
                     break;
-                case LogLevel::ERROR:
+                case LogLevel::ERR:
                     log_level = "[ERROR]:";
                     msg = "\033[31m[ERROR]: " + message.message + '\n' + "\033[0m";
                     break;
