@@ -20,25 +20,25 @@ Include the `logger.h` header file in your source code:
 
 You can then use the TRACE, INFO, WARN, ERROR, FATAL, and DEBUG macros to log messages:
 ```cpp
-TRACE("This is a trace message");
-INFO("This is an info message");
-WARN("This is a warning message");
-ERROR("This is an error message");
-FATAL("This is a fatal message");
-DEBUG("This is a debug message");
+LTRACE("This is a trace message");
+LINFO("This is an info message");
+LWARN("This is a warning message");
+LERROR("This is an error message");
+LFATAL("This is a fatal message");
+LDEBUG("This is a debug message");
 ```
 If you want to use the ```std::format``` function
 
 ```cpp
-TRACE("Message {}", message);
-INFO("Message {}", message);
-WARN("Message {}", message);
-ERROR("Message {}", message);
-FATAL("Message {}", message);
-DEBUG("Message {}", message);
+LTRACE("Message {}", message);
+LINFO("Message {}", message);
+LWARN("Message {}", message);
+LERROR("Message {}", message);
+LFATAL("Message {}", message);
+LDEBUG("Message {}", message);
 ```
 
-The log level ```FATAL``` ends the program.
+The log level ```LFATAL``` ends the program.
 
 Each log message will include the function name, file name, and line number.
 
