@@ -10,6 +10,8 @@
 #include <chrono>
 #include <filesystem>
 
+bool saws::Logger::silent = false;
+
 namespace saws {
 
     struct LogMessage {
@@ -119,7 +121,8 @@ namespace saws {
     LoggerImpl g_loggerImpl;
 
     void Logger::log(LogLevel level, std::string message) {
-        g_loggerImpl.Log(level, message);
+        if (!silent)
+            g_loggerImpl.Log(level, message);
     }
 
     Logger g_logger;

@@ -24,7 +24,13 @@ namespace saws {
 
     class Logger {
     public:
+        static bool silent;
+
         static void log(LogLevel level, std::string message);
+
+        Logger() {
+            silent = false;
+        }
     };
 
     extern Logger g_logger;
